@@ -19,13 +19,20 @@ class Homepage extends StatelessWidget {
           body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text('Kamini Singh',
+              const CircleAvatar(
+                radius: 60,
+                backgroundColor: Colors.blue,
+                backgroundImage: AssetImage(
+                  'assets/photo.png',
+                ),
+              ),
+              const Text('Anjali Yadav',
                   style: TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.bold,
                   )),
               const Text(
-                'IT Undergrad',
+                'IT Postgrad',
                 style: TextStyle(
                   fontSize: 20,
                 ),
@@ -46,7 +53,7 @@ class Homepage extends StatelessWidget {
                       width: 15,
                     ),
                     Text(
-                      'kaminisingh540@gmail.com',
+                      'anjali006mca22@igdtuw.in',
                     ),
                   ],
                 ),
@@ -79,7 +86,8 @@ class Homepage extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  final Uri url = Uri.parse('https://www.linkedin.com/');
+                  final Uri url = Uri.parse(
+                      'https://www.linkedin.com/in/anjali-yadav-b95186210');
                   _launchUrl(url);
                 },
                 child: Container(

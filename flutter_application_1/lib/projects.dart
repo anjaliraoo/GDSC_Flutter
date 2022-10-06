@@ -10,24 +10,29 @@ class ProjectsPage extends StatelessWidget {
       child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.blue[100],
-            title: const Text('My Projects',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.black,
-            ),
+            title: const Text(
+              'My Projects',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.black,
+              ),
             ),
             leading: IconButton(
-              onPressed:  () {
+              onPressed: () {
                 Navigator.pop(context);
               },
-              icon: const Icon(Icons.arrow_back, color: Colors.black,),
+              icon: const Icon(
+                Icons.arrow_back,
+                color: Colors.black,
               ),
+            ),
           ),
           body: Column(
             children: [
               GestureDetector(
                 onTap: () {
-                  final Uri _url = Uri.parse('https://github.com/');
+                  final Uri _url = Uri.parse(
+                      'https://github.com/anjaliraoo/GDSC_Flutter/tree/master/hello_world');
                   _launchUrl(_url);
                 },
                 child: Padding(
@@ -56,8 +61,9 @@ class ProjectsPage extends StatelessWidget {
                 thickness: 2,
               ),
               GestureDetector(
-                onTap: (){
-                   final Uri _url = Uri.parse('https://github.com/');
+                onTap: () {
+                  final Uri _url = Uri.parse(
+                      'https://github.com/anjaliraoo/GDSC_Flutter/tree/master/flutter_application_1');
                   _launchUrl(_url);
                 },
                 child: Padding(
