@@ -1,23 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/home_page.dart';
-import 'package:flutter_application_1/projects.dart';
-
+import 'home_page.dart';
+import 'projects.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-    initialRoute:'home_page',
-    routes: {
-      'home_page':(context) => const Homepage(),
-      'projects_page':(context) => const ProjectsPage(),
-    },
+      title: 'Portfolio App',
+      theme: new ThemeData(
+          scaffoldBackgroundColor: Color.fromARGB(255, 65, 64, 64)),
+      initialRoute: 'home',
+      routes: {
+        'home': (context) => const Homepage(),
+        'about': (context) => const Projects(),
+      },
+      debugShowCheckedModeBanner: false,
     );
   }
 }
